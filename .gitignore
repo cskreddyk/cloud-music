@@ -1,0 +1,33 @@
+# Node.js
+node_modules/
+dist/
+build/
+coverage/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+
+# Logs
+*.log
+
+# Music files
+media/*
+!media/.gitkeep
+
+# Editor
+.vscode/
+.DS_Store

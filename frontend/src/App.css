@@ -1,0 +1,211 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  padding-bottom: 125px;
+}
+
+.sidebar {
+  background: #080808;
+  padding: 25px;
+}
+
+.brand {
+  color: #1ed760;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  margin-bottom: 40px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: 0;
+  color: #ddd;
+  padding: 15px 0;
+}
+
+.muted {
+  color: #888;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+main {
+  padding: 30px;
+  min-width: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #242424;
+  border-radius: 30px;
+  padding: 15px 20px;
+  max-width: 450px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(120deg, #126b40, #142c24);
+  padding: 40px;
+  border-radius: 15px;
+  margin: 25px 0 35px;
+}
+
+.hero h1 {
+  font-size: clamp(25px, 4vw, 42px);
+  margin: 15px 0;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 230px));
+  gap: 20px;
+}
+
+.song {
+  background: #242424;
+  padding: 15px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.song:hover {
+  background: #303030;
+}
+
+.cover {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #176d54, #24374c);
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.song:nth-child(2n) .cover {
+  background: linear-gradient(135deg, #634b91, #27243b);
+}
+
+.song:nth-child(3n) .cover {
+  background: linear-gradient(135deg, #97643a, #49352a);
+}
+
+.song p, .track p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.play {
+  background: #1ed760 !important;
+  color: black !important;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #080808;
+  border-top: 1px solid #333;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.track, .volume, .buttons, .timeline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.controls {
+  width: 40%;
+}
+
+.buttons {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.buttons button {
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.timeline {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.timeline input {
+  width: 100%;
+  min-width: 0;
+}
+
+.volume input {
+  width: 90px;
+}
+
+.error {
+  color: #ff8080;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding-bottom: 180px;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .sidebar button {
+    display: inline-flex;
+    margin-right: 15px;
+  }
+
+  .brand {
+    margin-bottom: 10px;
+  }
+
+  .muted {
+    display: none;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .player {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .controls {
+    width: 100%;
+    order: 3;
+  }
+}
