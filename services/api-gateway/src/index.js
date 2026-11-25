@@ -27,6 +27,6 @@ app.use("/api/stream", createProxyMiddleware({
     pathRewrite: path => "/stream" + path
 }));
 
-app.listen(process.env.PORT || 4000, "127.0.0.1", () => {
+app.listen(process.env.PORT || 4000, "0.0.0.0", () => {
     console.log("API Gateway running on port 4000");
 });

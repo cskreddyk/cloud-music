@@ -31,6 +31,6 @@ app.get("/stream/:file", (req, res) => {
     res.sendFile(path.join(mediaPath, file));
 });
 
-app.listen(process.env.PORT || 4004, "127.0.0.1", () => {
+app.listen(process.env.PORT || 4004, "0.0.0.0", () => {
     console.log("Streaming service running on port 4004");
 });
